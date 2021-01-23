@@ -22,7 +22,7 @@ axios.get(apiURL).then(apiResponse => {
 
 
 // Imports all routes from the pokemon routes file
-app.use('/pokemon', require('./routes/pokemon'));
+app.use('/pokemon', require('./routes'));
 
 app.listen(port, () => {
   console.log('...listening on', port );
