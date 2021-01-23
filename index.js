@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(ejsLayouts);
 
 // GET / - main index of site
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
   let apiURL = 'http://pokeapi.co/api/v2/pokemon/';
   
   // Use request to call the API
@@ -20,6 +20,9 @@ app.get('/', function(req, res) {
   })
 });
 
+app.get('/pearls', (req, res) => {
+  res.render('pearls');
+})
 
 app.listen(port, () => {
   console.log('...listening on', port );
