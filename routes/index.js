@@ -10,7 +10,7 @@ router.get('/', function(req, res) {
   .then( favorites => {
     console.log('🪀 🪀 🪀 GET /: ', favorites)
     res.render('pokemon/index', {
-      pokemon: favorites
+      treasure: favorites
     })
   })
   .catch(error => console.log(`❌ Error`, error));
