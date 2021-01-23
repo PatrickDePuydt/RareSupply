@@ -1,14 +1,5 @@
-<div>
-  
-  <% pearls.forEach(function(pearls) { %>
-    <div>
-      <h2><%= pearls.name %></h2>
-      
-      <form method="POST" action="/pokemon">
-        <input hidden type="text" name="name" value="<%= pearls.name %>">
-        <button type="submit">Add</button>
-      </form>
+<%= console.log('❌ PAYLOAD: ', PAYLOAD) %> 
 
-    </div>
-  <% }); %>
-</div>
+<% PAYLOAD.forEach(function(image) { %>
+  <img src="<%= image.primaryimageurl %>" alt="">
+<% }); %>

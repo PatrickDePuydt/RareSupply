@@ -16,9 +16,8 @@ app.get('/', (req, res) => {
   let apiURL = `https://api.harvardartmuseums.org/object?medium=2028216&place=2028213&apikey=${process.env.API_KEY}`;
 
   axios.get(apiURL).then(apiResponse => {
-    let responseResults = apiResponse.data;
-    console.log(`⭐ responseResults: ⭐`, responseResults, `❌`);
-    res.send(responseResults);
+    let responseResults = apiResponse.data.records;
+    res.render('index', {PAYLOAD: responseResults});
   })
 
 });
