@@ -12,8 +12,9 @@ app.use(ejsLayouts);
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-
-  let apiURL = `https://api.harvardartmuseums.org/object?medium=2028216&place=2028213&apikey=${process.env.API_KEY}`;
+  const question = "object?medium=2028216&place=2028213"
+  const accessKey = process.env.API_KEY;
+  const apiURL = `https://api.harvardartmuseums.org/${question}&apikey=${accessKey}`;
 
   axios.get(apiURL).then(apiResponse => {
     let responseResults = apiResponse.data.records;
