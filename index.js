@@ -11,12 +11,12 @@ app.use(ejsLayouts);
 
 // GET / - main index of site
 app.get('/', function(req, res) {
-  let pokemonUrl = 'http://pokeapi.co/api/v2/pokemon/';
+  let apiURL = 'http://pokeapi.co/api/v2/pokemon/';
   // Use request to call the API
-  axios.get(pokemonUrl).then(apiResponse => {
-    let pokemon = apiResponse.data.results;
+axios.get(apiURL).then(apiResponse => {
+    let responseResults = apiResponse.data.results;
 
-    res.render('index', { pokemon: pokemon.slice(0, 151) });
+    res.render('index', { pearls: responseResults.slice(0, 151) });
   })
 });
 
