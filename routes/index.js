@@ -17,20 +17,12 @@ router.get('/', function(req, res) {
 });
 
 
-router.get('/:name', function(req, res) {
-  // TODO: Get all records from the DB and render to view
-  
-  console.log(`🦄: req.params`, req.params.name);
-});
-
-// POST /pokemon - receive the name of a pokemon and add it to the database
 router.post('/', function(req, res) {
   db.pokemon.findOrCreate({
     where: {
       name: req.body.name
     }
   }).then( digimon => {
-    console.log('💎 💎 💎 post /: ', digimon)
     res.redirect('/pokemon')
   });
 });
