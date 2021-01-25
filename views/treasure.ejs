@@ -3,7 +3,7 @@
 <% // console.log('❌⭐ Payload', PAYLOAD, '/⭐❌') %> 
 
 <% PAYLOAD.map(image => { %>
-  <a href="treasure/<%= image.objectid %>">
-    <img src="<%= image.primaryimageurl %>?height=150&width=150" alt="<%= image.title %>">
+  <a href="treasure/<%= image.imageid %>">
+    <img src="<%= image.baseimageurl %>?height=150&width=150" alt="<%= image.title %>">
   </a>
 <% }); %>
