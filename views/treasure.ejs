@@ -1,5 +1,8 @@
 <h1>Treasure</h1>
 
+<% // console.log('❌ Payload', PAYLOAD, '/❌') %> 
 <% PAYLOAD.map(image => { %>
-  <img src="<%= image.primaryimageurl %>?height=150&width=150" alt="Holy shit it works">
+  <a href="treasure/<%= image.id %>">
+    <img src="<%= image.primaryimageurl %>?height=150&width=150" alt="<%= image.title %>">
+  </a>
 <% }); %>
