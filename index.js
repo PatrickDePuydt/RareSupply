@@ -20,8 +20,10 @@ app.get('/', (req, res) => {
     let responseResults = apiResponse.data.records;
     res.render('index', {PAYLOAD: responseResults});
   })
-
 });
+
+app.use('/treasure', require('./routes/treasure'));
+
 
 app.listen(port, () => {
   console.log('...listening on', port );
