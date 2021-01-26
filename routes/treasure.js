@@ -17,6 +17,7 @@ router.get('/', (req, res) => {
 
 })
 
+// Individual Image View
 router.get('/:id', (req, res) => {
   const id = req.params.id
   const accessKey = process.env.API_KEY;
@@ -28,8 +29,10 @@ router.get('/:id', (req, res) => {
     console.log(`🎃 responseResults///: `, responseResults, `/// 🎃 responseResults: `)
     res.render('treasure/image', {PAYLOAD: responseResults});
   })
-  
 });
+
+
+
 
 router.get('/saved/day', (req, res) => {
   res.send('Working 🥜');
