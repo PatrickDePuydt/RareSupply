@@ -3,12 +3,9 @@ const router = express.Router();
 const axios = require('axios'); 
 
 
-let seedImage = ["https://nrs.harvard.edu/urn-3:HUAM:77963_dynmc?height=150&width=150", "https://nrs.harvard.edu/urn-3:HUAM:77963_dynmc?height=150&width=150"]
-
 router.get('/', (req, res) => {
   const resource = "image"
-  const filter = "width:>2000"
-  // const filter = "keyword=abstract"
+  const filter = "keyword=abstract&size=25"
   const accessKey = process.env.API_KEY;
   const apiURL = `https://api.harvardartmuseums.org/${resource}?${filter}&apikey=${process.env.API_KEY}`;
 
