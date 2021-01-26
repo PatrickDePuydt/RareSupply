@@ -31,8 +31,12 @@ router.get('/:id', (req, res) => {
   })
 });
 
-
-
+router.post('/', (req, res) => {
+  // See what's inside `req`
+  // DB find or create
+  // Rolling
+  console.log(`🔥 Route hit!`);
+});
 
 router.get('/saved/day', (req, res) => {
   res.send('Working 🥜');
