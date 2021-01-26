@@ -11,7 +11,7 @@ router.get('/', (req, res) => {
 
   axios.get(apiURL).then(apiResponse => {
     let responseResults = apiResponse.data.records;
-    console.log(`🍊 apiResponse.data: `, apiResponse.data, '🍊🍊🍊');
+    // console.log(`🍊 apiResponse.data: `, apiResponse.data, '🍊🍊🍊');
     res.render('treasure', {PAYLOAD: responseResults});
   })
 
@@ -26,16 +26,16 @@ router.get('/:id', (req, res) => {
 
   axios.get(apiURL).then(apiResponse => {
     let responseResults = apiResponse.data;
-    console.log(`🎃 responseResults///: `, responseResults, `/// 🎃 responseResults: `)
+    // console.log(`🎃 responseResults///: `, responseResults, `/// 🎃 responseResults: `)
     res.render('treasure/image', {PAYLOAD: responseResults});
   })
 });
 
 router.post('/', (req, res) => {
   // See what's inside `req`
+  console.log(`🔥 req.body`, req.body, '/🔥')
   // DB find or create
   // Rolling
-  console.log(`🔥 Route hit!`);
 });
 
 router.get('/saved/day', (req, res) => {
