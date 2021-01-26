@@ -1,7 +1,14 @@
 header {
-  padding: 75px;
-}
+  display: flex;
+  justify-content: center;
+  padding: 0 50px;
 
+}
+.nav {
+  /* padding: 25px 75px;
+  display: flex;
+  flex-direction: column; */
+}
 .sub-nav {
   border: 5px solid gold;
 }

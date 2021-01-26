@@ -12,6 +12,9 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.treasure.blongsTo(models.user)
+      models.treasure.hasMany(models.tag, {
+        through: "treasure_tags"
+      })
     }
   };
   treasure.init({

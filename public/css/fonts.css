@@ -5,5 +5,12 @@ h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, div {
 }
 
 a {
-  
+  color: var(--rare);
+  text-decoration: none;
+  border: 4px solid transparent;
+  transition: .15s all ease;
+}
+
+a:hover {
+  border-color: var(--rare);
 }
