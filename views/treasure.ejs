@@ -2,8 +2,12 @@
 
 <% // console.log('❌⭐ Payload', PAYLOAD, '/⭐❌') %> 
 
-<% PAYLOAD.map(image => { %>
-  <a href="treasure/<%= image.imageid %>">
-    <img src="<%= image.baseimageurl %>?height=150&width=150" alt="<%= image.title %>">
-  </a>
-<% }); %>
+<section class="lay_grid_gallery">
+  <% PAYLOAD.map(image => { %>
+    <a href="treasure/<%= image.imageid %>">
+      <div class="c_image">
+        <img src="<%= image.baseimageurl %>?height=300&width=300" alt="<%= image.title %>">
+      </div>
+    </a>
+  <% }); %>
+</section>

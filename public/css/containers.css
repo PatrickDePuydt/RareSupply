@@ -1,0 +1,17 @@
+.c_image {
+  border: 1px solid black;
+  /* display: inline; */
+  /* flex: 0 0 240px; */
+  /* height: 240px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+  grid-row: span 2;
+}
+
+.c_image img {
+    /* height: 100%;
+    max-width: 100%; */
+  }
