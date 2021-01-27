@@ -11,7 +11,7 @@ module.exports = {
       hook: {
         type: Sequelize.STRING
       },
-      treasure_id: {
+      treasureId: {
         type: Sequelize.INTEGER
       },
       createdAt: {

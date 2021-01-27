@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   tag.init({
     hook: DataTypes.STRING,
-    treasure_id: DataTypes.INTEGER
+    treasureId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'tag',
