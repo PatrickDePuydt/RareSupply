@@ -11,7 +11,7 @@ app.use(ejsLayouts);
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-  res.render('index')
+  res.redirect('/treasure')
 });
 
 app.get('/profile', (req,res) => {

@@ -13,3 +13,9 @@ a {
 a:hover {
   /* border-color: var(--ultra); */
 }
+
+.sunken_header {
+  font-size: 60px;
+  transform: translate(-4px, 15px)
+  
+}
