@@ -10,14 +10,11 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      models.tag.hasMany(models.trasure, {
-        through: "treasure_tags"
-      })
+      // define association here
     }
   };
   tag.init({
-    memory_hook: DataTypes.STRING,
-    user_id: DataTypes.INTEGER,
+    hook: DataTypes.STRING,
     treasure_id: DataTypes.INTEGER
   }, {
     sequelize,
