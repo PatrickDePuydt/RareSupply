@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   };
   treasure.init({
     image: DataTypes.STRING,
-    userId: DataTypes.STRING
+    userId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'treasure',
