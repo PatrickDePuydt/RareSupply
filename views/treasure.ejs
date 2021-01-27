@@ -2,12 +2,13 @@
 
 <% // console.log('❌⭐ Payload', PAYLOAD, '/⭐❌') %> 
 
-<section class="lay_grid_gallery">
+<section class="lay_flex">
   <% PAYLOAD.map(image => { %>
     <a href="treasure/<%= image.imageid %>">
       <div class="c_image">
         <img src="<%= image.baseimageurl %>?height=300&width=300" alt="<%= image.title %>">
       </div>
     </a>
+    <div style="border: 1px solid transparent; display: block; width: 100px; height: 10px;">&nbsp;</div>
   <% }); %>
 </section>

@@ -1,9 +1,18 @@
-<% console.log('❌2 Payload', PAYLOAD, '/❌2') %> 
-<img src="<%= PAYLOAD.baseimageurl %>?height=300&width=300" />
+<% // console.log('❌2 Payload', PAYLOAD, '/❌2') %> 
 
-<form action="/treasure" method="POST">
- <input type="text" name="imageid" value="<%= PAYLOAD.imageid %>">
- <input type="text" name="hook" value="Karate Chopping Light Pink Squishy Pinecone">
- <input type="text" name="url" value="<%= PAYLOAD.baseimageurl %>">
-  <button type="submit">Submit</button>
-</form>
+<section class="cubicle">
+  <div class="cubicle-child">
+    <div class="c_image">
+      <img src="<%= PAYLOAD.baseimageurl %>?height=300&width=300" />
+    </div>
+  </div>
+
+  <div class="cubicle-child">
+    <form action="/treasure" method="POST">
+    <input type="text" name="imageid" value="<%= PAYLOAD.imageid %>">
+    <input type="text" name="hook" value="Karate Chopping Light Pink Squishy Pinecone">
+    <input type="text" name="url" value="<%= PAYLOAD.baseimageurl %>">
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>
