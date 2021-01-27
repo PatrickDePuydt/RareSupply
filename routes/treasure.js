@@ -34,7 +34,7 @@ router.get('/:id', (req, res) => {
 router.post('/', (req, res) => {
   // See what's inside `req`
   const reqBody = JSON.parse(JSON.stringify(req.body));
-  console.log('🔥🔥🔥: ', reqBody.lorem ,'/🔥')
+  console.log('🔥🔥🔥: ', reqBody ,'/🔥')
   // DB find or create
   // Rolling
 });

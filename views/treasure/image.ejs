@@ -1,7 +1,7 @@
-<% //console.log('❌2 Payload', PAYLOAD, '/❌2') %> 
+<% console.log('❌2 Payload', PAYLOAD, '/❌2') %> 
 <img src="<%= PAYLOAD.baseimageurl %>?height=300&width=300" />
 
 <form action="/treasure" method="POST">
- <input type="text" name="lorem" value="Ipsum">
+ <input type="text" name="imageid" value="<%= PAYLOAD.imageid %>">
   <button type="submit">Submit</button>
 </form>
