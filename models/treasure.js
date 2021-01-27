@@ -10,7 +10,8 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      models.treasure.blongsTo(models.user),
+      models.treasure.hasMany(models.tag, {through: "treasureTags"})
     }
   };
   treasure.init({
