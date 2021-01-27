@@ -25,9 +25,10 @@ router.get('/:id', (req, res) => {
   // console.log(`🚀 apiURL///: `, apiURL, `/// 🚀 apiURL: `)
 
   axios.get(apiURL).then(apiResponse => {
+    let memoryHook = "Light Pink Squishy Pinecone at Starbucks"
     let responseResults = apiResponse.data;
     // console.log(`🎃 responseResults///: `, responseResults, `/// 🎃 responseResults: `)
-    res.render('treasure/image', {PAYLOAD: responseResults});
+    res.render('treasure/image', {PAYLOAD: responseResults, HOOK: memoryHook});
   })
 });
 
