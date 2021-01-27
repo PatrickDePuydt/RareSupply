@@ -33,7 +33,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   // See what's inside `req`
-  console.log(`🔥 res`, res, '/🔥')
+  console.log('🔥🔥🔥: ', req ,'/🔥')
   // DB find or create
   // Rolling
 });

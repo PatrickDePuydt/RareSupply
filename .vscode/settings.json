@@ -1,12 +1,12 @@
 {
    "workbench.preferredHighContrastColorTheme": "Abyss",
   "workbench.colorTheme": "Default High Contrast",
-  "workbench.colorCustomizations": {
-    "titleBar.activeForeground": "#3100FF",
-    "titleBar.inactiveForeground": "#3100FFcc",
-    "titleBar.activeBackground": "#3100FF",
-    "titleBar.inactiveBackground": "#3100FFCC"
-  },
+"workbench.colorCustomizations": {
+  "titleBar.activeForeground": "#3100FF",
+  "titleBar.inactiveForeground": "#3100FFcc",
+  "titleBar.activeBackground": "#3100FF",
+  "titleBar.inactiveBackground": "#3100FFCC"
+},
   // These are all my auto-save configs
   "editor.formatOnSave": true,
   // turn it off for JS and JSX, we will do this via eslint

@@ -1,6 +1,7 @@
 <% //console.log('❌2 Payload', PAYLOAD, '/❌2') %> 
 <img src="<%= PAYLOAD.baseimageurl %>?height=300&width=300" />
 
-<form action="/treasure" method="POST" label="<%= PAYLOAD.imageid %>" name="<%= PAYLOAD.imageid %>">
-  <button>Submit</button>
+<form action="/treasure" method="POST">
+ <!-- PAYLOAD.imageid -->
+  <button type="submit" name="<%= PAYLOAD.imageid %> " label="<%= PAYLOAD.imageid %> ">Submit</button>
 </form>
