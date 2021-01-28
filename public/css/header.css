@@ -13,7 +13,8 @@ header {
 }
 
 .sub-nav.m_right {
-  flex: 2;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .sub-nav .sub-nav-explore {
