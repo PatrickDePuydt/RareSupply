@@ -10,9 +10,14 @@ router.post('/signup', (req, res) => {
   res.send(req.body);
 });
 
-
-router.post('/login', function(req, res) {
+router.get('/login', function(req, res) {
   res.render('auth/login');
 });
+
+router.post('/login', (req, res) => {
+  console.log(`🍔🍔🍔🍔🍔`)
+  res.send(req.body);
+});
+
 
 module.exports = router;

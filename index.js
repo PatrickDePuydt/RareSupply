@@ -11,8 +11,7 @@ app.use(ejsLayouts);
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-  // res.redirect('/treasure');
-  res.redirect('/auth/signup');
+  res.redirect('/auth/login'); // Send the user immediately to login
 });
 
 app.get('/profile', (req,res) => {
