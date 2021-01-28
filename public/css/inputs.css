@@ -6,3 +6,8 @@ input {
   font-size: 24px;
   font-weight: bold;
 }
+
+
+button {
+  cursor: pointer
+}

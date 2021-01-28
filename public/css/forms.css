@@ -1,8 +1,10 @@
 .auth_form {
   border: 5px solid black;
   padding: var(--padding_luxe);
+  display: flex;
 }
 
 .auth_form label {
   color: white;
 }
+
