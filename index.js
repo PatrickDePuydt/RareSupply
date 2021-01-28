@@ -15,15 +15,16 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(ejsLayouts);
-app.use(
-    helmet.contentSecurityPolicy({
-    directives: {
-      "default-src": [" 'self' ", "https://*.harvardartmuseums.org", "fonts.googleapis.com" ],
-      "img-src": [" 'self' ", "https://*.harvardartmuseums.org"],
-      "fonts-src": [" 'self' ", "fonts.gstatic.com"]
-    },
-  })
-);
+// app.use(
+//     helmet.contentSecurityPolicy({
+//     directives: {
+//       "default-src": [" 'self' ", "https://*.harvardartmuseums.org" ],
+//       "font-src": [" fonts.gstatic.com "],
+//       "style-src": [" 'self' ", "fonts.googleapis.com", "unsafe-inline"],
+//       "img-src": [ " 'self' ", "https://*.harvardartmuseums.org" ]
+//     },
+//   })
+// );
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
