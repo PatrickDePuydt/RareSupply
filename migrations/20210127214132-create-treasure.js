@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      imageId: {
+      harvardImageID: {
         type: Sequelize.INTEGER
       },
-      image: {
+      imageUrl: {
         type: Sequelize.STRING
       },
       userId: {

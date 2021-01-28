@@ -10,8 +10,8 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   treasure.init({
-    imageId: DataTypes.INTEGER,
-    image: DataTypes.STRING,
+    harvardImageID: DataTypes.INTEGER,
+    imageUrl: DataTypes.STRING,
     userId: DataTypes.INTEGER
   }, {
     sequelize,

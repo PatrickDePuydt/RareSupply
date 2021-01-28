@@ -12,6 +12,9 @@ router.get('/signup', (req, res) => {
 // Sign up POST route
 router.post('/signup', (req, res) => {
   // findOrCreate a new user based on email
+  
+  console.log(`🔥🔥🔥`, req.body, `/// 🔥🔥🔥`);
+
   db.user.findOrCreate({
     where: {
       email: req.body.email
@@ -51,7 +54,7 @@ router.get('/login', (req, res) => {
 // make passport do the login stuff
 router.post('/login', passport.authenticate('local', {
   failureRedirect: '/auth/login',
-  successRedirect: '/',
+  successRedirect: '/treasure',
   failureFlash: 'Invalid login credentials',
   successFlash: 'Successfully Logged In'
 }));

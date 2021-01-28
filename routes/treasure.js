@@ -32,16 +32,17 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  
   const reqDotBody = JSON.parse(JSON.stringify(req.body));
   const harvardImageID = reqDotBody.imageid;
   const imageUrl = reqDotBody.url;
+
+  console.log(`🍑🍑🍑 req.user`, req.user);
   
   db.treasure.findOrCreate({
     where: {
       userId: req.user.id,
       imageId: harvardImageID,
-      image: imageUrl
+      imageUrl: imageUrl
     }
   })
   
