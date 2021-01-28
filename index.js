@@ -11,13 +11,15 @@ app.use(ejsLayouts);
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.get('/', (req, res) => {
-  res.redirect('/treasure')
+  // res.redirect('/treasure');
+  res.redirect('/auth/signup');
 });
 
 app.get('/profile', (req,res) => {
   res.render('profile');
 });
 
+app.use('/auth', require('./routes/auth'));
 app.use('/treasure', require('./routes/treasure'));
 
 
