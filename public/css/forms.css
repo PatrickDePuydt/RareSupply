@@ -2,6 +2,7 @@
   border: 5px solid black;
   padding: var(--padding_luxe);
   display: flex;
+  flex-wrap: wrap;
 }
 
 .auth_form label {

@@ -1,13 +1,18 @@
 <h1 class="sunken_header">Log In</h1>
+<section class="bg_black">
 
-<form action="/auth/login" method="POST" class="auth_form bg_black">
-  <div class="c_input mg_md_md">
-    <label for="auth-email" class="sr_only">Email</label>
-    <input id="auth-email" type="email" name="email" placeholder="email">
-  </div>
-  <div class="c_input mg_md_md">
-    <label for="auth-password" class="sr_only">Password</label>
-    <input id="auth-password" type="password" name="password" placeholder="password">
-  </div>
-  <button type="submit" class="mg_md_md">Log in</button>
-</form>
+  <form action="/auth/login" method="POST" class="auth_form">
+    <div class="c_input mg_md_md">
+      <label for="auth-email" class="sr_only">Email</label>
+      <input id="auth-email" type="email" name="email" placeholder="email">
+    </div>
+    <div class="c_input mg_md_md">
+      <label for="auth-password" class="sr_only">Password</label>
+      <input id="auth-password" type="password" name="password" placeholder="password">
+    </div>
+    <button type="submit" class="mg_md_md">Log in</button>
+  </form>
+
+  <a href="/auth/login">Login</a>
+
+</section>
