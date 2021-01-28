@@ -1,0 +1,8 @@
+.auth_form {
+  border: 5px solid black;
+  padding: var(--padding_luxe);
+}
+
+.auth_form label {
+  color: white;
+}

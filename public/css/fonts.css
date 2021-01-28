@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;900&display=swap');
 
-h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, div {
+h1, h2, h3, h4, h5, h6, p, span, a, button, input, select, div, input, label {
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -15,7 +15,7 @@ a:hover {
 }
 
 .sunken_header {
-  font-size: 60px;
-  transform: translate(-4px, 15px)
+  font-size: 80px;
+  transform: translate(-8px, 20px)
   
 }

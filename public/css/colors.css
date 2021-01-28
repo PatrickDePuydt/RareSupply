@@ -1,3 +1,8 @@
 :root {
   --ultra: #3100FF;
 }
+
+
+.bg_black {
+  background: black;
+}

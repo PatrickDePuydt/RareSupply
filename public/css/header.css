@@ -1,10 +1,10 @@
 header {
   display: flex;
-  padding: 75px;
+  padding: var(--padding_luxe);
 
 }
 .nav {
-  padding: 0 75px 75px 75px;
+  padding: 0 var(--padding_luxe) var(--padding_luxe) var(--padding_luxe);
   display: flex;
 
 }
