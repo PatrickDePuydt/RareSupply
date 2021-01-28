@@ -31,22 +31,21 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', (req, res) => {
-  // See what's inside `req`
+  console.log(`🍏`, req.body, `/🍏`)
   const reqDotBody = JSON.parse(JSON.stringify(req.body));
   const imageId = reqDotBody.imageid;
   const memoryHook = reqDotBody.hook;
   const imageUrl = reqDotBody.url;
-  // DB find or create
-  console.log(`🔥 DB (((`, db.treasure, `)))🔥`);
+  
   db.treasure.findOrCreate({
     where: {
+      userId: req.user.id,
       imageId: imageId,
       image: imageUrl,
       memoryHook: memoryHook
     }
   })
   
-  // Rolling
 });
 
 router.get('/saved/day', (req, res) => {

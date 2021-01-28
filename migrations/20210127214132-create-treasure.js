@@ -8,11 +8,17 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      imageId: {
+        type: Sequelize.INTEGER
+      },
       image: {
         type: Sequelize.STRING
       },
       userId: {
         type: Sequelize.INTEGER
+      },
+      memoryHook: {
+        type: Sequelize.STRING
       },
       createdAt: {
         allowNull: false,
