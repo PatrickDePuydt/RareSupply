@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
   treasure.init({
     imageId: DataTypes.INTEGER,
     image: DataTypes.STRING,
-    memoryHook: DataTypes.STRING,
     userId: DataTypes.INTEGER
   }, {
     sequelize,
