@@ -8,6 +8,11 @@ a {
   color: var(--ultra);
   text-decoration: none;
   transition: .15s all ease;
+  /* border-bottom: 2px solid var(--ultra); */
+}
+
+a.m_light {
+  background: white;
 }
 
 a:hover {

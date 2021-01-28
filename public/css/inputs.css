@@ -5,6 +5,22 @@ input {
   border-radius: 50px;
   font-size: 24px;
   font-weight: bold;
+  appearance: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: black;
+}
+input:focus::placeholder {
+  color: white;
+}
+
+
+
+input:focus {
+  background: black;
+  color: white;
 }
 
 
