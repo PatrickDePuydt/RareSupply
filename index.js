@@ -4,7 +4,7 @@ const ejsLayouts = require('express-ejs-layouts');
 const session = require('express-session');
 const flash = require('connect-flash');
 const helmet = require('helmet');
-const passport = require('../config/ppConfig');
+const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const path = require('path'); // Local File Path for Js/CSS
 const app = express();
@@ -15,7 +15,15 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(ejsLayouts);
-app.use(helmet());
+app.use(
+    helmet.contentSecurityPolicy({
+    directives: {
+      "default-src": [" 'self' ", "https://*.harvardartmuseums.org", "fonts.googleapis.com" ],
+      "img-src": [" 'self' ", "https://*.harvardartmuseums.org"],
+      "fonts-src": [" 'self' ", "fonts.gstatic.com"]
+    },
+  })
+);
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
