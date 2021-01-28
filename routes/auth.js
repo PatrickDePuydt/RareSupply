@@ -20,20 +20,21 @@ router.post('/signup', (req, res) => {
       email: req.body.email
     },
     defaults: {
-      name: req.body.name,
+      email: req.body.name,
       password: req.body.password
     }
   }).then(([user, created]) => {
-    // if the user WAS created
+    
     if (created) {
-      console.log(`😎 ${user.name} was created!`);
-      // authenticat and redirect to homepage or profile
+      console.log(`😎 ${user.email} was created!`);
+      
       passport.authenticate('local', {
         successRedirect: '/treasure',
         successFlash: 'Successful account creation'
       })(req, res);
-    } else { // else (there is a user at that email so they can't sign up)
-      console.log(`⛔️ ${user.name} already exists!`);
+      
+    } else { 
+      console.log(`⛔️ ${user.email} already exists!`);
       req.flash('error', 'Email already exists')
       // redirect to /auth/signup 
       res.redirect('/auth/signup');
