@@ -27,10 +27,13 @@
 }
 
 .cubicle {
-  border: 5px solid gold;
   display: flex;
 }
 
 .cubicle-child {
-  border: 5px solid black;
+  background: black;
+}
+
+.isolated {
+ border: 5px solid magenta; 
 }

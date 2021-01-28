@@ -10,5 +10,21 @@
 }
 
 .c_image img {
-    height: 100%;
-  }
+  height: 100%;
+}
+
+.c_image.m_full {
+  margin: unset;
+  flex: unset;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  overflow: hidden;
+}
+
+.c_image.m_full img {
+  height: unset;
+  width: 100%;
+}

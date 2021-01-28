@@ -2,6 +2,12 @@
   margin: 25px 0;
 }
 
+
 .mg_md_md {
   margin: 25px;
+}
+
+.u_one-line {
+  width: 100%;
+  display: block;
 }

@@ -1,3 +1,7 @@
+label  {
+  font-size: 16px;
+}
+
 .auth_form {
   border: 5px solid black;
   padding: var(--padding_luxe);
@@ -9,3 +13,24 @@
   color: white;
 }
 
+.save_form {
+  background: black;
+  padding: var(--padding_luxe);
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+}
+
+.save_form label {
+  color: white;
+}
+
+.save_form input {
+  font-size: 20px;
+}
+
+.save_form input {
+  border-color: transparent;
+  background: black;
+  color: white;
+}
