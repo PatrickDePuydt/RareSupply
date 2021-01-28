@@ -24,9 +24,10 @@ router.get('/:id', (req, res) => {
   const apiURL = `https://api.harvardartmuseums.org/image/${id}?apikey=${accessKey}`;
 
   axios.get(apiURL).then(apiResponse => {
-    let memoryHook = "Light Pink Squishy Pinecone at Starbucks"
     let responseResults = apiResponse.data;
-    res.render('treasure/image', {PAYLOAD: responseResults, HOOK: memoryHook});
+    res.render('treasure/image', {
+      PAYLOAD: responseResults
+    });
   })
 });
 
@@ -34,15 +35,13 @@ router.post('/', (req, res) => {
   console.log(`🍏`, req.body, `/🍏`)
   const reqDotBody = JSON.parse(JSON.stringify(req.body));
   const imageId = reqDotBody.imageid;
-  const memoryHook = reqDotBody.hook;
   const imageUrl = reqDotBody.url;
   
   db.treasure.findOrCreate({
     where: {
       userId: req.user.id,
       imageId: imageId,
-      image: imageUrl,
-      memoryHook: memoryHook
+      image: imageUrl
     }
   })
   

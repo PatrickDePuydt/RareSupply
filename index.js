@@ -15,6 +15,7 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(ejsLayouts);
+// TODO fix directives
 // app.use(
 //     helmet.contentSecurityPolicy({
 //     directives: {
@@ -24,7 +25,7 @@ app.use(ejsLayouts);
 //       "img-src": [ " 'self' ", "https://*.harvardartmuseums.org" ]
 //     },
 //   })
-// );
+// ); 
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
