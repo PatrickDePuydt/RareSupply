@@ -16,17 +16,21 @@ app.use(require('morgan')('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, '/public')));
 app.use(ejsLayouts);
-// TODO fix directives
-// app.use(
-//     helmet.contentSecurityPolicy({
-//     directives: {
-//       "default-src": [" 'self' ", "https://*.harvardartmuseums.org" ],
-//       "font-src": [" fonts.gstatic.com "],
-//       "style-src": [" 'self' ", "fonts.googleapis.com", "unsafe-inline"],
-//       "img-src": [ " 'self' ", "https://*.harvardartmuseums.org" ]
-//     },
-//   })
-// ); 
+
+
+app.use(
+    helmet.contentSecurityPolicy({
+    directives: {
+      defaultSrc: [" 'self' ", "https://*.harvard.edu" ],
+      fontSrc: [" 'self' ", "fonts.gstatic.com", "unsafe-inline" ],
+      styleSrc: [" 'self' ", "unsafe-inline", "fonts.googleapis.com"],
+      imgSrc: [ " 'self' ", "https://*.harvard.edu" ]
+    },
+  })
+); 
+
+"style-src 'self' https://fonts.googleapis.com;"
+"font-src 'self' https://fonts.gstatic.com"
 
 app.use(session({
   secret: process.env.SESSION_SECRET,
@@ -37,6 +41,21 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
+app.use((req, res, next) => {
+  let alerts = req.flash();
+  console.log(`🚨 Alerts`, alerts);
+  res.locals.alerts = alerts;
+  res.locals.currentUser = req.user;
+  next();
+  console.log(`🔫`)
+});
+
+
+app.get('/', (req, res) => {
+  console.log(`🚀 Req.user`, req.user)
+  res.redirect('/auth/login'); // Send the user immediately to login
+});
 
 app.get('/profile', isLoggedIn, (req, res) => {
   
@@ -50,10 +69,6 @@ app.get('/profile', isLoggedIn, (req, res) => {
 
 });
 
-app.get('/', (req, res) => {
-  console.log(`🚀 Req.user`, req.user)
-  res.redirect('/auth/login'); // Send the user immediately to login
-});
 
 app.use('/auth', require('./routes/auth')); // Login/Signup
 app.use('/treasure', require('./routes/treasure')); // Most app routes
