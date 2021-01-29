@@ -21,10 +21,26 @@ app.use(ejsLayouts);
 app.use(
     helmet.contentSecurityPolicy({
     directives: {
-      defaultSrc: [" 'self' ", "https://*.harvard.edu" ],
-      fontSrc: [" 'self' ", "fonts.gstatic.com", "unsafe-inline" ],
-      styleSrc: [" 'self' ", "unsafe-inline", "fonts.googleapis.com"],
-      imgSrc: [ " 'self' ", "https://*.harvard.edu" ]
+      defaultSrc: [
+        " 'self' ", 
+        "https://*.harvard.edu" 
+      ],
+      fontSrc: [
+        " 'self' ", 
+        " 'unsafe-inline' ", 
+        "https://fonts.gstatic.com", 
+        "https://fonts.googleapis.com" 
+      ],
+      styleSrc: [
+        " 'self' ", 
+        " 'unsafe-inline' ", 
+        "https://fonts.gstatic.com", 
+        "https://fonts.googleapis.com"
+      ],
+      imgSrc: [ 
+        " 'self' ", 
+        "https://*.harvard.edu" 
+      ]
     },
   })
 ); 
@@ -50,7 +66,7 @@ app.use((req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  console.log(`🚀 Req.user`, req.user)
+  console.log(`🚀 🚀 🚀 🚀 Req.user`, req.user)
   res.redirect('/auth/login'); // Send the user immediately to login
 });
 
