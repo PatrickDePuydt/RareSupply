@@ -44,3 +44,12 @@ nodemon
 &nbsp;
 
 <img src="./readme_images/monsterweekend.jpg" width="500" alt="Monster Weekend" style="margin: auto; display: block;">
+
+### What happened
+
+| Stage of grief | Screenshot |
+|:-----------:|:------------:|
+| <p style="width: 100px;">Beta: Original ERD</p> |  <img src="./readme_images/erds/1.png"/> |
+| <p style="width: 100px;">Gen2: User has many bookmarks, user has many boards.</p> |  <img src="./readme_images/erds/2.png"/> |
+| <p style="width: 100px;">V3: User has many treasures, tags have many treasure tags.</p> |  <img src="./readme_images/erds/3.png"/> |
+| <p style="width: 100px;">V4: Potential... right ERD?</p> |  <img src="./readme_images/erds/4.png"/> |
