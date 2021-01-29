@@ -38,7 +38,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-app.get('/profile', (req, res) => {
+app.get('/profile', isLoggedIn, (req, res) => {
   
   // db.treasure.findOne({
   //   where: { id: req.params.id },
@@ -51,6 +51,7 @@ app.get('/profile', (req, res) => {
 });
 
 app.get('/', (req, res) => {
+  console.log(`🚀 Req.user`, req.user)
   res.redirect('/auth/login'); // Send the user immediately to login
 });
 

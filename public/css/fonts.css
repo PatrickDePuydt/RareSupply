@@ -22,7 +22,11 @@ a:hover {
 .sunken_header {
   font-size: 80px;
   transform: translate(-8px, 20px)
-  
+}
+
+.sunken_header.m_right {
+  text-align: right;
+  transform: translate(5px, 20px)
 }
 
 a h1 {
