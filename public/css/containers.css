@@ -30,9 +30,12 @@
 }
 
 .c_cta.m_duo {
-  display: block;
+  display: flex;
   width: 100%;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
+  align-items: center;
 }
 
 .lay_flex_end {

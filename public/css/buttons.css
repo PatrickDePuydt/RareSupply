@@ -4,14 +4,16 @@ button {
   padding: 25px;
   color: white;
   border-radius: 0px;
-    font-size: 24px;
+  font-size: 24px;
   font-weight: bold;
+  max-width: 300px;
 }
 
 .cta {
-  margin: 0 50px;
+  max-width: 100px;
   color: white;
   border-bottom: 5px solid white;
+  display: block;
 }
 
 .cta.m_black {
