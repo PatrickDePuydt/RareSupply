@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   const resource = "image"
   const filter = "keyword=abstract&size=25"
   const accessKey = process.env.API_KEY;
-  const apiURL = `https://api.harvardartmuseums.org/${resource}?${filter}&apikey=${process.env.API_KEY}`;
+  const apiURL = `https://api.harvardartmuseums.org/${resource}?${filter}&apikey=${accessKey}`;
 
   axios.get(apiURL).then(apiResponse => {
     let responseResults = apiResponse.data.records;

@@ -55,7 +55,7 @@ router.get('/login', (req, res) => {
 // make passport do the login stuff
 router.post('/login', passport.authenticate('local', {
   failureRedirect: '/auth/login',
-  successRedirect: '/treasure',
+  successRedirect: '/',
   failureFlash: 'Invalid login credentials',
   successFlash: 'Successfully Logged In'
 }));
