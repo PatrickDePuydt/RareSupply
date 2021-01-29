@@ -34,3 +34,8 @@
   width: 100%;
   text-align: center;
 }
+
+.lay_flex_end {
+  display: flex;
+  justify-content: flex-end;
+}

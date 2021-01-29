@@ -33,14 +33,12 @@ router.post('/signup', (req, res) => {
     } else { 
       console.log(`⛔️ ${user.email} already exists!`);
       req.flash('error', 'Email already exists')
-      // redirect to /auth/signup 
       res.redirect('/auth/signup');
     }
   }).catch(err => {
     console.log(`🐻 Bad news bears, there's an error!`);
     console.log(err);
     req.flash('error', err.message);
-    // if there is an error, it's probably a validation error, so we'll return to /auth/signup
     res.redirect('/auth/signup');
   })
 });
@@ -52,7 +50,7 @@ router.get('/login', (req, res) => {
 // make passport do the login stuff
 router.post('/login', passport.authenticate('local', {
   failureRedirect: '/auth/login',
-  successRedirect: '/',
+  successRedirect: '/treasure',
   failureFlash: 'Invalid login credentials',
   successFlash: 'Successfully Logged In'
 }));
