@@ -29,9 +29,6 @@ app.use(
   })
 ); 
 
-"style-src 'self' https://fonts.googleapis.com;"
-"font-src 'self' https://fonts.gstatic.com"
-
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
