@@ -1,12 +1,27 @@
+:root {
+  --border-thickness: 40px;
+}
+
 label  {
   font-size: 16px;
 }
 
-.auth_form {
-  border: 5px solid black;
-  padding: var(--padding_luxe);
+
+form {
   display: flex;
   flex-wrap: wrap;
+  padding: var(--padding_luxe);  
+  justify-content: center;
+  width: 50vw;
+
+}
+
+.auth_form {
+  border: var(--border-thickness) solid transparent;
+}
+
+.auth_form.bg_white {
+  border: var(--border-thickness) solid black;
 }
 
 .auth_form label {
@@ -14,10 +29,6 @@ label  {
 }
 
 .save_form {
-  background: black;
-  padding: var(--padding_luxe);
-  display: flex;
-  flex-wrap: wrap;
   height: 50vh;
 }
 

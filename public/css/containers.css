@@ -28,3 +28,9 @@
   height: unset;
   width: 100%;
 }
+
+.c_cta.m_duo {
+  display: block;
+  width: 100%;
+  text-align: center;
+}

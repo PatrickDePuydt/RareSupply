@@ -13,3 +13,8 @@ button {
   color: white;
   border-bottom: 5px solid white;
 }
+
+.cta.m_black {
+  color: black;
+  border-color: black;
+}

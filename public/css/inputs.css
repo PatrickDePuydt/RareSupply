@@ -16,12 +16,27 @@ input:focus::placeholder {
   color: white;
 }
 
-
-
 input:focus {
   background: black;
   color: white;
 }
+
+input.m_white {
+  border: 5px solid black;
+}
+
+input.m_white::placeholder {
+  color: black;
+}
+input.m_white:focus::placeholder {
+  color: black;
+}
+
+input.m_white:focus {
+  background: white;
+  color: black;
+}
+
 
 
 button {

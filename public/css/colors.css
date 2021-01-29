@@ -2,7 +2,10 @@
   --ultra: #3100FF;
 }
 
-
 .bg_black {
   background: black;
+}
+
+.bg_white {
+  background: white;
 }

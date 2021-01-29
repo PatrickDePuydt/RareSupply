@@ -38,9 +38,16 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
 
-app.get('/profile', isLoggedIn, (req, res) => {
-  console.log(`⭐`, isLoggedIn);
-  res.render('profile');
+app.get('/profile', (req, res) => {
+  
+  // db.treasure.findOne({
+  //   where: { id: req.params.id },
+  //   include: [db.treasure]
+  // }).then((treasure) => {
+  //   console.log(`💎 Treasure`, treasure)
+  // }).catch((error) => {res.status(400).render('main/404')});
+  console.log(`💎 req.params`, req.params)
+
 });
 
 app.get('/', (req, res) => {

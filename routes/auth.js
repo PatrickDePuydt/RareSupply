@@ -11,9 +11,6 @@ router.get('/signup', (req, res) => {
 
 // Sign up POST route
 router.post('/signup', (req, res) => {
-  // findOrCreate a new user based on email
-  
-  console.log(`🔥🔥🔥`, req.body, `/// 🔥🔥🔥`);
 
   db.user.findOrCreate({
     where: {
