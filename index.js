@@ -8,6 +8,7 @@ const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
 const path = require('path'); // Local File Path for Js/CSS
 const app = express();
+const db = require('./models');
 
 app.set('view engine', 'ejs');
 
@@ -38,6 +39,7 @@ app.use(passport.session());
 app.use(flash());
 
 app.get('/profile', isLoggedIn, (req, res) => {
+  console.log(`⭐`, isLoggedIn);
   res.render('profile');
 });
 

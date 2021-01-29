@@ -36,15 +36,13 @@ router.post('/', (req, res) => {
   const harvardImageID = reqDotBody.harvardImageId;
   const imageUrl = reqDotBody.url;
 
-  console.log(`🍑🍑🍑 reqDotBody`, reqDotBody);
-  
   db.treasure.findOrCreate({
     where: {
       userId: req.user.id,
       harvardImageID: harvardImageID,
       imageUrl: imageUrl
     }
-  })
+  }).then( res.redirect('/treasure') )
   
 });
 

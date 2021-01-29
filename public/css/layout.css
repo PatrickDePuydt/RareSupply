@@ -17,12 +17,10 @@
 }
 
 .lay_flex a:nth-child(even) {
-  /* border: 5px solid crimson; */
   flex: 1;
 }
 
 .lay_flex a:nth-child(odd) {
-  /* border: 5px solid dodgerblue; */
   flex: 5;
 }
 
@@ -34,6 +32,18 @@
   background: black;
 }
 
-.isolated {
- border: 5px solid magenta; 
+.profile {
+  padding: var(--padding_luxe);
 }
+
+.profile h2 {
+  color: white;
+}
+
+.profile a {
+  color: white;
+  border-bottom: 3px solid white;
+  margin: 25px 0;
+  display: inline-block;
+}
+
