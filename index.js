@@ -48,7 +48,7 @@ app.use(
 
 const sessionStore = new SequelizeStore({
   db: db.sequelize,
-  exiration: 1000 * 60 * 120
+  expiration: 1000 * 60 * 120
 });
 
 app.use(session({
@@ -66,16 +66,14 @@ app.use(flash());
 
 app.use((req, res, next) => {
   let alerts = req.flash();
-  console.log(`🚨 Alerts`, alerts);
   res.locals.alerts = alerts;
   res.locals.currentUser = req.user;
   next();
-  console.log(`🔫`)
 });
 
 
-app.get('/', (req, res) => {
-  console.log(`🚀 🚀 🚀 🚀 Req.user`, req.user);
+app.get('/', isLoggedIn, (req, res) => {
+  console.log(`🚀 🚀 🚀 🚀 isLoggedIn`, isLoggedIn);
   res.redirect('/auth/login'); // Send the user immediately to login
 });
 

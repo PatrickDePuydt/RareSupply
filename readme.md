@@ -36,7 +36,7 @@ nodemon
 ***
 
 ## Backstory
-| What I thought I was building | What I ended up building |
+| What I thought I was building | What I struggled to build |
 |:-----------:|:------------:|
 | <img src="./readme_images/shark_1.jpeg" width="300" alt="Shark"> | <img src="./readme_images/shark_2.jpeg" width="300" alt="Unorthodox Shark"> |
 
