@@ -6,7 +6,7 @@
 **1. Download repo**
 ```bash
 git clone git@github.com:PatrickDePuydt/RareSupply.git
-# 👉 terminal
+# 👉 terminal (where you want to download the code to)
 ```
 
 **2. Install dependencies**
@@ -21,13 +21,13 @@ createdb pearl_syrup_development
 # 👉 terminal (doesn't matter where you are)
 ```
 
-**4. Run Migrations **
+**4. Run Migrations**
 ```
 sequelize db:migrate
 # 👉 terminal (project root)
 ```
 
-**5. Fire up server **
+**5. Fire up server**
 ```
 nodemon
 # 👉 terminal (project root)

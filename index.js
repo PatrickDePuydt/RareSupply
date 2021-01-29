@@ -9,6 +9,7 @@ const isLoggedIn = require('./middleware/isLoggedIn');
 const path = require('path'); // Local File Path for Js/CSS
 const app = express();
 const db = require('./models');
+const SequelizeStore = require('connect-session-sequelize')(session.Store)
 
 app.set('view engine', 'ejs');
 
@@ -45,11 +46,19 @@ app.use(
   })
 ); 
 
+const sessionStore = new SequelizeStore({
+  db: db.sequelize,
+  exiration: 1000 * 60 * 120
+});
+
 app.use(session({
   secret: process.env.SESSION_SECRET,
+  store: sessionStore,
   resave: false,
   saveUninitialized: true
 }));
+
+sessionStore.sync();
 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -66,7 +75,7 @@ app.use((req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  console.log(`🚀 🚀 🚀 🚀 Req.user`, req.user)
+  console.log(`🚀 🚀 🚀 🚀 Req.user`, req.user);
   res.redirect('/auth/login'); // Send the user immediately to login
 });
 
