@@ -8,6 +8,8 @@ button {
   font-weight: bold;
 }
 
-button.m_light {
-  
+.cta {
+  margin: 0 50px;
+  color: white;
+  border-bottom: 5px solid white;
 }
